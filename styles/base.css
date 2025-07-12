@@ -1,0 +1,35 @@
+#course-title {
+    display: block;
+    text-align: center;
+    background-color: #0905d7;
+    color: #eceaea;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+nav a {
+    font-style: 100;
+    background-color: rgb(67, 35, 211);
+    text-decoration: none;
+    color: #eceaea;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto
+}
+
+nav a:hover {
+    border: 1px solid #007BFF;
+}
