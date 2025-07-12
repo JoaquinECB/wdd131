@@ -15,7 +15,7 @@ nav {
 }
 
 nav a {
-    font-style: 100;
+    font-style: normal;
     background-color: rgb(67, 35, 211);
     text-decoration: none;
     color: #eceaea;
@@ -34,10 +34,19 @@ nav a:hover {
     border: 1px solid #007BFF;
 }
 
-main {
+main h1{
+    text-align: center;
+    margin: 20px auto;
     width: 100%;
     padding: 20px;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: #6c2828;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
 }
