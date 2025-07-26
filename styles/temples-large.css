@@ -1,21 +1,16 @@
-@media (max-width: 500px) {
-    nav {
-        display: none;
-        flex-direction: column;
-        background: #fff;
-        position: absolute;
-        top: 60px;
-        /* adjust as needed */
-        left: 0;
-        width: 100%;
-        z-index: 100;
-    }
-
-    nav.open {
-        display: flex;
+@media (min-width: 700px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     #hamburger {
-        display: block;
+        display: none;
+    }
+
+    nav {
+        display: flex !important;
+        position: static;
+        background: none;
+        padding: 0;
     }
 }
