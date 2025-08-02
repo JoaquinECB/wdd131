@@ -50,8 +50,23 @@ picture img {
 }
 
 .weather h2 {
-    margin-bottom: 0.5rem;
-    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.weather h2::after {
+    content: '';
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-image: url('../images/weather-icon.svg');
+    /* Asegúrate que la ruta sea correcta */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 0.5rem;
+    vertical-align: middle;
 }
 
 .weather-icon {
@@ -61,11 +76,9 @@ picture img {
     height: auto;
 }
 
-@media (min-width: 768px) {
-    .weather-icon {
-        display: block;
-        width: 64px;
-        margin-bottom: 0.5rem;
+@media screen and (min-width: 768px) {
+    .weather h2::after {
+        display: inline-block;
     }
 }
 
