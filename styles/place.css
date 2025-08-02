@@ -62,7 +62,6 @@ picture img {
     width: 40px;
     height: 40px;
     background-image: url('../images/weather-icon.svg');
-    /* Asegúrate que la ruta sea correcta */
     background-size: contain;
     background-repeat: no-repeat;
     margin-left: 0.5rem;
