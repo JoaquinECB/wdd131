@@ -2,47 +2,53 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore the ancient Inca citadel of Machu Picchu, its history, and current weather conditions." />
+    <meta name="author" content="Joaquín E. Cáceres Bello" />
     <title>Machu Picchu</title>
-    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place.css" />
     <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1>Machu Picchu, Peru</h1>
+        <h1>Explore Machu Picchu</h1>
     </header>
 
     <main>
-        <section class="hero">
-            <picture>
-                <source srcset="images/machu-small.webp" media="(max-width: 500px)">
-                <source srcset="images/machu-medium.webp" media="(max-width: 1000px)">
-                <img src="images/machu-large.webp" alt="Machu Picchu landscape" width="1000" height="500">
-            </picture>
-        </section>
+        <picture>
+            <source srcset="images/machu-large.webp" media="(min-width: 1024px)" />
+            <source srcset="images/machu-medium.webp" media="(min-width: 640px)" />
+            <img src="images/machu-small.webp" alt="Panoramic view of Machu Picchu" />
+        </picture>
 
         <section class="info">
             <h2>About Machu Picchu</h2>
             <p>
-                Machu Picchu is a 15th-century Inca citadel located in the Eastern Cordillera of southern Peru on a
-                mountain ridge.
-                It is often referred to as the "Lost City of the Incas" and is one of the most iconic travel
-                destinations in the world.
+                Machu Picchu is a 15th-century Inca citadel located in the Eastern Cordillera of southern Peru,
+                on a mountain ridge 2,430 meters (7,970 ft) above sea level. Often referred to as the "Lost City of the
+                Incas",
+                it is the most familiar icon of Inca civilization.
+            </p>
+            <p>
+                It was declared a Peruvian Historical Sanctuary in 1981 and a UNESCO World Heritage Site in 1983.
+                In 2007, Machu Picchu was voted one of the New Seven Wonders of the World.
             </p>
         </section>
 
         <section class="weather">
-            <h2>Weather <span class="weather-icon" aria-hidden="true">⛅</span></h2>
-            <p>Temperature: <span id="temp">15</span> °C</p>
-            <p>Wind Speed: <span id="speed">10</span> km/h</p>
-            <p>Wind Chill: <span id="windchill">Calculating...</span></p>
+            <h2>Weather</h2>
+            <img src="images/weather-icon.svg" alt="Partly cloudy with wind" class="weather-icon" />
+            <p>Temperature: <span id="temperature">12</span>°C</p>
+            <p>Wind Speed: <span id="windSpeed">10</span> km/h</p>
+            <p>Wind Chill: <span id="windChill">--</span></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+        <p>&copy; <span id="currentYear"></span> | Machu Picchu Page</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 </body>
 

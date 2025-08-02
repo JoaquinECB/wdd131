@@ -1,16 +1,20 @@
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
-
-const temp = parseFloat(document.getElementById('temp').textContent);
-const speed = parseFloat(document.getElementById('speed').textContent);
-const windchillDisplay = document.getElementById('windchill');
-
-function calculateWindChill(t, s) {
-    return (13.12 + 0.6215 * t - 11.37 * Math.pow(s, 0.16) + 0.3965 * t * Math.pow(s, 0.16)).toFixed(1);
+function calculateWindChill(tempC, windKmH) {
+    return 13.12 + 0.6215 * tempC - 11.37 * Math.pow(windKmH, 0.16) + 0.3965 * tempC * Math.pow(windKmH, 0.16);
 }
 
-if (temp <= 10 && speed > 4.8) {
-    windchillDisplay.textContent = `${calculateWindChill(temp, speed)} °C`;
-} else {
-    windchillDisplay.textContent = "N/A";
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const temp = parseFloat(document.getElementById("temperature").textContent);
+    const wind = parseFloat(document.getElementById("windSpeed").textContent);
+    const windChillEl = document.getElementById("windChill");
+
+    if (temp <= 10 && wind > 4.8) {
+        const chill = calculateWindChill(temp, wind).toFixed(1);
+        windChillEl.textContent = `${chill} °C`;
+    } else {
+        windChillEl.textContent = "N/A";
+    }
+
+    // Footer data
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+});
