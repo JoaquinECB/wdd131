@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machu Picchu</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Machu Picchu, Peru</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/machu-small.webp" media="(max-width: 500px)">
+                <source srcset="images/machu-medium.webp" media="(max-width: 1000px)">
+                <img src="images/machu-large.webp" alt="Machu Picchu landscape" width="1000" height="500">
+            </picture>
+        </section>
+
+        <section class="info">
+            <h2>About Machu Picchu</h2>
+            <p>
+                Machu Picchu is a 15th-century Inca citadel located in the Eastern Cordillera of southern Peru on a
+                mountain ridge.
+                It is often referred to as the "Lost City of the Incas" and is one of the most iconic travel
+                destinations in the world.
+            </p>
+        </section>
+
+        <section class="weather">
+            <h2>Weather <span class="weather-icon" aria-hidden="true">⛅</span></h2>
+            <p>Temperature: <span id="temp">15</span> °C</p>
+            <p>Wind Speed: <span id="speed">10</span> km/h</p>
+            <p>Wind Chill: <span id="windchill">Calculating...</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
