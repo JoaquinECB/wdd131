@@ -79,6 +79,20 @@ picture img {
     .weather h2::after {
         display: inline-block;
     }
+
+    .weather-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .weather h2::after {
+        display: none;
+    }
+
+    .weather-icon {
+        display: block;
+    }
 }
 
 footer {
