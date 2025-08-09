@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
             dedicated: "2010, October, 23",
             area: 41010,
             imageUrl:
-                "images/rome.jpg"
+                "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-2642-main.jpg"
         },
         {
             templeName: "Salt Lake City Utah",
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
             dedicated: "1893, April, 6",
             area: 382207,
             imageUrl:
-                "images/St Lake.jpg"
+                "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-15669-main.jpg"
         },
         {
             templeName: "St. George Utah",
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
             dedicated: "1877, April, 6",
             area: 143969,
             imageUrl:
-                "images/St. George.jpg"
+                "https://churchofjesuschristtemples.org/assets/img/temples/st.-george-utah-temple/st.-george-utah-temple-40435-main.jpg"
         }
     ];
 
