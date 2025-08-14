@@ -1,5 +1,7 @@
+// Footer año actual
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 
+// Mensaje de saludo según hora
 function showGreeting() {
     const greetingEl = document.getElementById("greeting");
     const hours = new Date().getHours();
@@ -16,14 +18,24 @@ function showGreeting() {
     greetingEl.textContent = message;
 }
 
+// Clima con texto e imagen
 function showWeather() {
-    const weatherEl = document.getElementById("weather");
-    const temp = 22; // Example temperature
-    const condition = "Sunny";
+    const temperatureEl = document.getElementById("temperature");
+    const iconEl = document.getElementById("weatherIcon");
 
-    weatherEl.textContent = `Weather: ${temp}°C - ${condition}`;
+    // Aquí puedes cambiar valores según tu API o datos reales
+    const weatherData = {
+        temp: 26,
+        condition: "Sunny",
+        icon: "images/sunny.png"
+    };
+
+    temperatureEl.textContent = `${weatherData.temp}°C - ${weatherData.condition}`;
+    iconEl.src = weatherData.icon;
+    iconEl.alt = `Weather: ${weatherData.condition}`;
 }
 
+// Guardar datos de contacto en localStorage
 function saveContactData(event) {
     event.preventDefault();
     const name = document.getElementById("name").value;
@@ -36,20 +48,10 @@ function saveContactData(event) {
     alert("Thank you! Your message has been saved.");
 }
 
+// Inicialización
 document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("greeting")) showGreeting();
-    if (document.getElementById("weather")) showWeather();
+    if (document.getElementById("temperature") && document.getElementById("weatherIcon")) showWeather();
     const contactForm = document.getElementById("contact-form");
     if (contactForm) contactForm.addEventListener("submit", saveContactData);
 });
-
-const weatherData = {
-    temp: 26,
-    condition: "sunny", 
-    icon: "images/sunny.png"
-};
-
-document.getElementById("temperature").textContent = `${weatherData.temp}°C`;
-
-document.getElementById("weatherIcon").src = weatherData.icon;
-document.getElementById("weatherIcon").alt = `Weather: ${weatherData.condition}`;
