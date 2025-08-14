@@ -1,4 +1,5 @@
-// ----- Dynamic Greeting -----
+document.getElementById("currentyear").textContent = new Date().getFullYear();
+
 function showGreeting() {
     const greetingEl = document.getElementById("greeting");
     const hours = new Date().getHours();
@@ -15,7 +16,6 @@ function showGreeting() {
     greetingEl.textContent = message;
 }
 
-// ----- Weather Widget Example -----
 function showWeather() {
     const weatherEl = document.getElementById("weather");
     const temp = 22; // Example temperature
@@ -24,7 +24,6 @@ function showWeather() {
     weatherEl.textContent = `Weather: ${temp}°C - ${condition}`;
 }
 
-// ----- Save Form Data to localStorage -----
 function saveContactData(event) {
     event.preventDefault();
     const name = document.getElementById("name").value;
@@ -37,7 +36,6 @@ function saveContactData(event) {
     alert("Thank you! Your message has been saved.");
 }
 
-// ----- Initialize Functions -----
 document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("greeting")) showGreeting();
     if (document.getElementById("weather")) showWeather();
