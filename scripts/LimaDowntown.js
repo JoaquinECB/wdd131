@@ -1,0 +1,46 @@
+// ----- Dynamic Greeting -----
+function showGreeting() {
+    const greetingEl = document.getElementById("greeting");
+    const hours = new Date().getHours();
+    let message = "";
+
+    if (hours < 12) {
+        message = "Good morning! Ready to explore Lima?";
+    } else if (hours < 18) {
+        message = "Good afternoon! Let's discover downtown Lima.";
+    } else {
+        message = "Good evening! Enjoy Lima's night charm.";
+    }
+
+    greetingEl.textContent = message;
+}
+
+// ----- Weather Widget Example -----
+function showWeather() {
+    const weatherEl = document.getElementById("weather");
+    const temp = 22; // Example temperature
+    const condition = "Sunny";
+
+    weatherEl.textContent = `Weather: ${temp}°C - ${condition}`;
+}
+
+// ----- Save Form Data to localStorage -----
+function saveContactData(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const contactData = { name, email, message };
+    localStorage.setItem("contactForm", JSON.stringify(contactData));
+
+    alert("Thank you! Your message has been saved.");
+}
+
+// ----- Initialize Functions -----
+document.addEventListener("DOMContentLoaded", () => {
+    if (document.getElementById("greeting")) showGreeting();
+    if (document.getElementById("weather")) showWeather();
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) contactForm.addEventListener("submit", saveContactData);
+});
