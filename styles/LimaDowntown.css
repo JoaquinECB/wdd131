@@ -104,6 +104,29 @@ form button:hover {
     background-color: #00224d;
 }
 
+#weatherIcon {
+    width: 64px;
+    height: 64px;
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.landmarks {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
 /* ----- Footer ----- */
 footer {
     text-align: center;
@@ -118,5 +141,11 @@ footer {
     main {
         width: 80%;
         margin: auto;
+    }
+}
+
+@media (min-width: 600px) {
+    .landmarks {
+        grid-template-columns: 1fr 1fr;
     }
 }

@@ -27,7 +27,7 @@ function showWeather() {
     const weatherData = {
         temp: 26,
         condition: "Sunny",
-        icon: "images/sunny.png"
+        icon: "images/weather-icon.svg"
     };
 
     temperatureEl.textContent = `${weatherData.temp}°C - ${weatherData.condition}`;
