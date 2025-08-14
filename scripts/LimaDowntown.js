@@ -42,3 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const contactForm = document.getElementById("contact-form");
     if (contactForm) contactForm.addEventListener("submit", saveContactData);
 });
+
+const weatherData = {
+    temp: 26,
+    condition: "sunny", 
+    icon: "images/sunny.png"
+};
+
+document.getElementById("temperature").textContent = `${weatherData.temp}°C`;
+
+document.getElementById("weatherIcon").src = weatherData.icon;
+document.getElementById("weatherIcon").alt = `Weather: ${weatherData.condition}`;
