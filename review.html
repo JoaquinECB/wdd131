@@ -20,12 +20,10 @@
     </footer>
 
     <script>
-        // Incrementar contador de reseñas
         let reviewCount = localStorage.getItem("reviewCount") || 0;
         reviewCount++;
         localStorage.setItem("reviewCount", reviewCount);
 
-        // Mostrar contador
         document.getElementById("counter").textContent = `You have submitted ${reviewCount} review(s).`;
     </script>
 </body>
